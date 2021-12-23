@@ -14,7 +14,7 @@ const App = () => {
         <Route path="/" component={Home}></Route>
         <Route path="/about" component={About}></Route>
         <Route path="/login" component={LoginPage}></Route>
-        <Route path="/logout" component={LogoutPage}></Route>
+        <ProtectedRoute path="/logout" component={LogoutPage}></ProtectedRoute>
         <ProtectedRoute
           path="/dashboard"
           component={DashboardPage}
