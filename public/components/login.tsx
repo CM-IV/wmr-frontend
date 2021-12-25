@@ -30,7 +30,7 @@ const Login = () => {
       })
       .then((data) => {
         localStorage.setItem("token", data.token);
-        console.log(data.token);
+        // console.log(data.token);
         setLocation("/");
       })
       .catch((err) => {
@@ -85,10 +85,7 @@ const Login = () => {
                 </div>
               </div>
 
-              <p>Don't have an account?</p>
-              <p>
-                <strong>Too fuckin' bad.</strong>
-              </p>
+              <p>Only the Admin can login.</p>
             </form>
           </div>
         </div>

@@ -37,6 +37,9 @@ const Nav = () => {
             <Link to={"/about"} class="navbar-item">
               About
             </Link>
+            <Link to={"/books"} class="navbar-item">
+              Books
+            </Link>
             {isAuthenticated && (
               <Link to={"/dashboard"} class="navbar-item">
                 Dashboard
@@ -48,7 +51,7 @@ const Nav = () => {
               <div class="buttons">
                 {!isAuthenticated && (
                   <Link to={"/login"} class="button is-success is-outlined">
-                    Log in
+                    Admin Login
                   </Link>
                 )}
                 {isAuthenticated && (
