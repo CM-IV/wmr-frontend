@@ -1,17 +1,15 @@
 import { Layout } from "../layouts/layout";
 import { Books } from "../components/books";
 
-const BooksPage = () => {
+const ProductsPage = () => {
   return (
     <Layout>
       <section class="section">
-        <h1 class="title">Books page</h1>
+        <h1 class="title">Products page</h1>
       </section>
-      <section class="section">
-        <Books />
-      </section>
+      <Books />
     </Layout>
   );
 };
 
-export { BooksPage };
+export { ProductsPage };

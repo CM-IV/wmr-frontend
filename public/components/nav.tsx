@@ -37,8 +37,8 @@ const Nav = () => {
             <Link to={"/about"} class="navbar-item">
               About
             </Link>
-            <Link to={"/books"} class="navbar-item">
-              Books
+            <Link to={"/products"} class="navbar-item">
+              Products
             </Link>
             {isAuthenticated && (
               <Link to={"/dashboard"} class="navbar-item">

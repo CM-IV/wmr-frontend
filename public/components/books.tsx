@@ -1,11 +1,14 @@
 import { Fragment } from "preact";
 import { useEffect, useState } from "preact/hooks";
+import { Paginator } from "./paginator";
 
 const Books = () => {
   const [bookData, setBookData] = useState<Books[]>([]);
+  const [page, setPage] = useState(1);
+  const [lastPage, setLastPage] = useState(0);
 
   const books = () => {
-    const fetchData = fetch(`${process.env.API_URL}/books`, {
+    const fetchData = fetch(`${process.env.API_URL}/books?page=${page}`, {
       method: "GET",
       mode: "cors",
       credentials: "same-origin",
@@ -16,9 +19,9 @@ const Books = () => {
       })
       .then((books) => {
         //console.log(books);
-        const sortedBooks = books.reverse();
 
-        setBookData(sortedBooks);
+        setBookData(books.data);
+        setLastPage(books.meta.last_page);
       })
       .catch((err) => {
         console.log(err);
@@ -27,18 +30,25 @@ const Books = () => {
 
   useEffect(() => {
     books();
-  }, []);
+  }, [page]);
 
   return (
     <Fragment>
-      <h2 class="subtitle">Here are some book titles:</h2>
-      {bookData.map((sortedBooks) => {
-        return (
-          <div class="box" key={sortedBooks.id}>
-            <p>{sortedBooks.title}</p>
-          </div>
-        );
-      })}
+      <section class="section">
+        <h2 class="subtitle">Books:</h2>
+        {bookData.map((sortedBooks) => {
+          return (
+            <div class="box" key={sortedBooks.id}>
+              <p>{sortedBooks.title}</p>
+            </div>
+          );
+        })}
+        <Paginator
+          page={page}
+          lastPage={lastPage}
+          pageChanged={(page) => setPage(page)}
+        />
+      </section>
     </Fragment>
   );
 };
