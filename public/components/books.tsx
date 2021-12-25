@@ -36,18 +36,35 @@ const Books = () => {
     <Fragment>
       <section class="section">
         <h2 class="subtitle">Books:</h2>
-        {bookData.map((sortedBooks) => {
-          return (
-            <div class="box" key={sortedBooks.id}>
-              <p>{sortedBooks.title}</p>
-            </div>
-          );
-        })}
-        <Paginator
-          page={page}
-          lastPage={lastPage}
-          pageChanged={(page) => setPage(page)}
-        />
+        <div class="columns">
+          {bookData.map((sortedBooks) => {
+            return (
+              // <div class="box" key={sortedBooks.id}>
+              //   <p>{sortedBooks.title}</p>
+              // </div>
+              <div class="column">
+                <div class="card" key={sortedBooks.id}>
+                  <div class="card-image">
+                    <figure class="image is-3by2">
+                      <img src={sortedBooks.image} alt="book image" />
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    {sortedBooks.title}
+                    <p>Coming Soon!</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        {bookData.length > 4 && (
+          <Paginator
+            page={page}
+            lastPage={lastPage}
+            pageChanged={(page) => setPage(page)}
+          />
+        )}
       </section>
     </Fragment>
   );

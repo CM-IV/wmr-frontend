@@ -29,7 +29,7 @@ const Paginator = (props: {
             </li>
             <li class="level-item">
               <a class="pagination-next" onClick={paginateNext}>
-                Next page
+                Next
               </a>
             </li>
           </ul>
