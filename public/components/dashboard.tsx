@@ -4,6 +4,7 @@ import { useState, useEffect } from "preact/hooks";
 
 const Dashboard = () => {
   const [bookNum, setBookNum] = useState(0);
+  const [projectNum, setProjectNum] = useState(0);
 
   const books = () => {
     const fetchData = fetch(`${process.env.API_URL}/books`, {
@@ -25,8 +26,29 @@ const Dashboard = () => {
       });
   };
 
+  const previews = () => {
+    const fetchData = fetch(`${process.env.API_URL}/previews`, {
+      method: "GET",
+      mode: "cors",
+      credentials: "same-origin",
+    });
+    fetchData
+      .then((res) => {
+        return res.json();
+      })
+      .then((previews) => {
+        //console.log(books);
+
+        setProjectNum(previews.meta.total);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   useEffect(() => {
     books();
+    previews();
   }, []);
 
   return (
@@ -55,7 +77,7 @@ const Dashboard = () => {
                 </div>
                 <div class="tile is-parent">
                   <article class="tile is-child box">
-                    <p class="title">4</p>
+                    <p class="title">{projectNum}</p>
                     <p class="subtitle">Projects</p>
                   </article>
                 </div>

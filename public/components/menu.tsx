@@ -14,7 +14,7 @@ const Menu = () => {
               </Link>
             </li>
             <li>
-              <Link to={"#"} id="menuButton" class="menu-item">
+              <Link to={"/manage-previews"} id="menuButton" class="menu-item">
                 Manage Previews
               </Link>
             </li>

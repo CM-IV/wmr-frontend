@@ -40,6 +40,9 @@ const Nav = () => {
             <Link to={"/products"} class="navbar-item">
               Products
             </Link>
+            <Link to={"/previews"} class="navbar-item">
+              Projects
+            </Link>
             {isAuthenticated && (
               <Link to={"/dashboard"} class="navbar-item">
                 Dashboard

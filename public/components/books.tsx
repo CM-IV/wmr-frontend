@@ -6,9 +6,10 @@ const Books = () => {
   const [bookData, setBookData] = useState<Books[]>([]);
   const [page, setPage] = useState(1);
   const [lastPage, setLastPage] = useState(0);
+  const [isPaginated, setIsPaginated] = useState(0);
 
   const books = () => {
-    const fetchData = fetch(`${process.env.API_URL}/books?page=${page}`, {
+    const fetchData = fetch(`${process.env.API_URL}/books/?page=${page}`, {
       method: "GET",
       mode: "cors",
       credentials: "same-origin",
@@ -21,6 +22,7 @@ const Books = () => {
         //console.log(books);
 
         setBookData(books.data);
+        setIsPaginated(books.meta.total);
         setLastPage(books.meta.last_page);
       })
       .catch((err) => {
@@ -58,7 +60,7 @@ const Books = () => {
             );
           })}
         </div>
-        {bookData.length > 4 && (
+        {isPaginated > 4 && (
           <Paginator
             page={page}
             lastPage={lastPage}

@@ -1,13 +1,10 @@
 import { Fragment } from "preact";
 import { useState, useEffect } from "preact/hooks";
 
-const AddBooks = () => {
+const AddPreviews = () => {
   const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
-  const [publisher, setPublisher] = useState("");
   const [image, setImage] = useState("");
-  const [description, setDescription] = useState("");
-  const [publish_year, setPublishYear] = useState("");
+  const [url, setUrl] = useState("");
   const [user, setUser] = useState(0);
 
   const token = localStorage.getItem("token");
@@ -35,32 +32,27 @@ const AddBooks = () => {
   };
 
   const submit = () => {
-    alert("Your book was added!");
+    alert("Your project preview was added!");
 
     // const userId = localStorage.getItem("userId");
 
-    parseInt(publish_year);
-
-    const bookData = {
+    const previewData = {
       title,
-      author,
-      publisher,
       image,
-      description,
+      url,
       assigned_to: user,
-      publish_year,
     };
 
-    const addBook = fetch(`${process.env.API_URL}/books`, {
+    const addPreview = fetch(`${process.env.API_URL}/previews`, {
       method: "POST",
       credentials: "same-origin",
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(bookData),
+      body: JSON.stringify(previewData),
     });
-    addBook
+    addPreview
       .then((res) => {
         return res.json();
       })
@@ -76,10 +68,10 @@ const AddBooks = () => {
   return (
     <Fragment>
       <section class="section">
-        <h1 class="title">Manage Books</h1>
+        <h1 class="title">Manage Project Previews</h1>
       </section>
       <section class="section">
-        <p class="subtitle">Add a book</p>
+        <p class="subtitle">Add a preview</p>
         <form onSubmit={submit}>
           <div class="field">
             <label class="label">Title</label>
@@ -89,30 +81,6 @@ const AddBooks = () => {
                 type="text"
                 placeholder="Book Title"
                 onChange={(e) => setTitle(e.currentTarget.value)}
-                required
-              />
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Author</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                placeholder="Book Author"
-                onChange={(e) => setAuthor(e.currentTarget.value)}
-                required
-              />
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Publisher</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                placeholder="Book Publisher"
-                onChange={(e) => setPublisher(e.currentTarget.value)}
                 required
               />
             </div>
@@ -130,24 +98,13 @@ const AddBooks = () => {
             </div>
           </div>
           <div class="field">
-            <label class="label">Description</label>
-            <div class="control">
-              <textarea
-                class="textarea"
-                placeholder="Book Description"
-                onChange={(e) => setDescription(e.currentTarget.value)}
-                required
-              ></textarea>
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Publish Year</label>
+            <label class="label">URL Link</label>
             <div class="control">
               <input
                 class="input"
-                type="text"
-                placeholder="Book Publish Year"
-                onChange={(e) => setPublishYear(e.currentTarget.value)}
+                type="url"
+                placeholder="Book Image"
+                onChange={(e) => setUrl(e.currentTarget.value)}
                 required
               />
             </div>
@@ -166,4 +123,4 @@ const AddBooks = () => {
   );
 };
 
-export { AddBooks };
+export { AddPreviews };
