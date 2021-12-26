@@ -50,12 +50,12 @@ const Nav = () => {
             <div class="navbar-item">
               <div class="buttons">
                 {!isAuthenticated && (
-                  <Link to={"/login"} class="button is-success is-outlined">
+                  <Link to={"/login"} class="button is-link">
                     Admin Login
                   </Link>
                 )}
                 {isAuthenticated && (
-                  <Link to={"/logout"} class="button is-success is-outlined">
+                  <Link to={"/logout"} class="button is-warning">
                     Logout
                   </Link>
                 )}

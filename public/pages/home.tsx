@@ -7,12 +7,8 @@ const Home = () => {
   return (
     <Layout>
       <section class="section">
-        <h1 class="title">Home page</h1>
-        <p>
-          Welcome to the Occidental Technologies full stack web app. Here I can
-          show you any books I'm writing or reading through. I also have a
-          website showcase for all the previous websites I have made.
-        </p>
+        <h1 class="title">Occident Software Systems</h1>
+        <p>Welcome to the Occidental Technologies full stack web app.</p>
       </section>
 
       <section class="section">

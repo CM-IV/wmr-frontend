@@ -72,7 +72,6 @@ const AddBooks = () => {
 
   return (
     <Fragment>
-      {console.log(localStorage.getItem("userId"))}
       <section class="section">
         <h1 class="title">Manage Books</h1>
       </section>
