@@ -55,7 +55,7 @@ const Nav = () => {
                   </Link>
                 )}
                 {isAuthenticated && (
-                  <Link to={"/logout"} class="button is-warning">
+                  <Link to={"/logout"} class="button is-danger is-light">
                     Logout
                   </Link>
                 )}
