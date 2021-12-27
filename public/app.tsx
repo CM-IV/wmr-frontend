@@ -9,6 +9,7 @@ import { PreviewsPage } from "./pages/previewsPage";
 import { ManageBooks } from "./pages/manageBooks";
 import { EditBooksPage } from "./pages/editBooksPage";
 import { ManagePreviews } from "./pages/managePreviews";
+import { EditPreviewsPage } from "./pages/editPreviewsPage";
 import { ProtectedRoute } from "./components/protectedRoute";
 import { NotFound } from "./pages/_404";
 
@@ -37,6 +38,10 @@ const App = () => {
         <ProtectedRoute
           path="/manage-previews"
           component={ManagePreviews}
+        ></ProtectedRoute>
+        <ProtectedRoute
+          path="/manage-previews/:id/edit"
+          component={EditPreviewsPage}
         ></ProtectedRoute>
         <Route component={NotFound}></Route>
       </Switch>

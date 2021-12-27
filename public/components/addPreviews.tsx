@@ -68,9 +68,6 @@ const AddPreviews = () => {
   return (
     <Fragment>
       <section class="section">
-        <h1 class="title">Manage Project Previews</h1>
-      </section>
-      <section class="section">
         <div class="box">
           <p class="subtitle">Add a preview</p>
           <form onSubmit={submit}>
