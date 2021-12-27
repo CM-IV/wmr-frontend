@@ -71,53 +71,55 @@ const AddPreviews = () => {
         <h1 class="title">Manage Project Previews</h1>
       </section>
       <section class="section">
-        <p class="subtitle">Add a preview</p>
-        <form onSubmit={submit}>
-          <div class="field">
-            <label class="label">Title</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                placeholder="Book Title"
-                onChange={(e) => setTitle(e.currentTarget.value)}
-                required
-              />
+        <div class="box">
+          <p class="subtitle">Add a preview</p>
+          <form onSubmit={submit}>
+            <div class="field">
+              <label class="label">Title</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Book Title"
+                  onChange={(e) => setTitle(e.currentTarget.value)}
+                  required
+                />
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label class="label">Image</label>
-            <div class="control">
-              <input
-                class="input"
-                type="url"
-                placeholder="Book Image"
-                onChange={(e) => setImage(e.currentTarget.value)}
-                required
-              />
+            <div class="field">
+              <label class="label">Image</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="url"
+                  placeholder="Book Image"
+                  onChange={(e) => setImage(e.currentTarget.value)}
+                  required
+                />
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label class="label">URL Link</label>
-            <div class="control">
-              <input
-                class="input"
-                type="url"
-                placeholder="Book Image"
-                onChange={(e) => setUrl(e.currentTarget.value)}
-                required
-              />
+            <div class="field">
+              <label class="label">URL Link</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="url"
+                  placeholder="Book Image"
+                  onChange={(e) => setUrl(e.currentTarget.value)}
+                  required
+                />
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <div class="loginButton">
-              <button class="button is-primary" type="submit">
-                Submit
-              </button>
+            <div class="field">
+              <div class="loginButton">
+                <button class="button is-primary" type="submit">
+                  Submit
+                </button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </section>
     </Fragment>
   );

@@ -7,6 +7,7 @@ import { DashboardPage } from "./pages/dashboardPage";
 import { ProductsPage } from "./pages/productsPage";
 import { PreviewsPage } from "./pages/previewsPage";
 import { ManageBooks } from "./pages/manageBooks";
+import { EditBooksPage } from "./pages/editBooksPage";
 import { ManagePreviews } from "./pages/managePreviews";
 import { ProtectedRoute } from "./components/protectedRoute";
 import { NotFound } from "./pages/_404";
@@ -28,6 +29,10 @@ const App = () => {
         <ProtectedRoute
           path="/manage-books"
           component={ManageBooks}
+        ></ProtectedRoute>
+        <ProtectedRoute
+          path="/manage-books/:id/edit"
+          component={EditBooksPage}
         ></ProtectedRoute>
         <ProtectedRoute
           path="/manage-previews"

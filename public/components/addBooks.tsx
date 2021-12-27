@@ -76,91 +76,90 @@ const AddBooks = () => {
   return (
     <Fragment>
       <section class="section">
-        <h1 class="title">Manage Books</h1>
-      </section>
-      <section class="section">
-        <p class="subtitle">Add a book</p>
-        <form onSubmit={submit}>
-          <div class="field">
-            <label class="label">Title</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                placeholder="Book Title"
-                onChange={(e) => setTitle(e.currentTarget.value)}
-                required
-              />
+        <div class="box">
+          <p class="subtitle">Add a book</p>
+          <form onSubmit={submit}>
+            <div class="field">
+              <label class="label">Title</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Book Title"
+                  onChange={(e) => setTitle(e.currentTarget.value)}
+                  required
+                />
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label class="label">Author</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                placeholder="Book Author"
-                onChange={(e) => setAuthor(e.currentTarget.value)}
-                required
-              />
+            <div class="field">
+              <label class="label">Author</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Book Author"
+                  onChange={(e) => setAuthor(e.currentTarget.value)}
+                  required
+                />
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label class="label">Publisher</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                placeholder="Book Publisher"
-                onChange={(e) => setPublisher(e.currentTarget.value)}
-                required
-              />
+            <div class="field">
+              <label class="label">Publisher</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Book Publisher"
+                  onChange={(e) => setPublisher(e.currentTarget.value)}
+                  required
+                />
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label class="label">Image</label>
-            <div class="control">
-              <input
-                class="input"
-                type="url"
-                placeholder="Book Image"
-                onChange={(e) => setImage(e.currentTarget.value)}
-                required
-              />
+            <div class="field">
+              <label class="label">Image</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="url"
+                  placeholder="Book Image"
+                  onChange={(e) => setImage(e.currentTarget.value)}
+                  required
+                />
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label class="label">Description</label>
-            <div class="control">
-              <textarea
-                class="textarea"
-                placeholder="Book Description"
-                onChange={(e) => setDescription(e.currentTarget.value)}
-                required
-              ></textarea>
+            <div class="field">
+              <label class="label">Description</label>
+              <div class="control">
+                <textarea
+                  class="textarea"
+                  placeholder="Book Description"
+                  onChange={(e) => setDescription(e.currentTarget.value)}
+                  required
+                ></textarea>
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label class="label">Publish Year</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                placeholder="Book Publish Year"
-                onChange={(e) => setPublishYear(e.currentTarget.value)}
-                required
-              />
+            <div class="field">
+              <label class="label">Publish Year</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Book Publish Year"
+                  onChange={(e) => setPublishYear(e.currentTarget.value)}
+                  required
+                />
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <div class="loginButton">
-              <button class="button is-primary" type="submit">
-                Submit
-              </button>
+            <div class="field">
+              <div class="loginButton">
+                <button class="button is-primary" type="submit">
+                  Submit
+                </button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </section>
     </Fragment>
   );
