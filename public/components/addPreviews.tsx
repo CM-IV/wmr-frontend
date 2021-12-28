@@ -77,7 +77,7 @@ const AddPreviews = () => {
                 <input
                   class="input"
                   type="text"
-                  placeholder="Book Title"
+                  placeholder="Preview Title"
                   onChange={(e) => setTitle(e.currentTarget.value)}
                   required
                 />
@@ -89,7 +89,7 @@ const AddPreviews = () => {
                 <input
                   class="input"
                   type="url"
-                  placeholder="Book Image"
+                  placeholder="Preview Image"
                   onChange={(e) => setImage(e.currentTarget.value)}
                   required
                 />
@@ -101,7 +101,7 @@ const AddPreviews = () => {
                 <input
                   class="input"
                   type="url"
-                  placeholder="Book Image"
+                  placeholder="Preview URL Link"
                   onChange={(e) => setUrl(e.currentTarget.value)}
                   required
                 />

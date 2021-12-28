@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "preact/hooks";
 import { Link } from "wouter-preact";
 import { useState, useEffect } from "preact/hooks";
 import { Paginator } from "./paginator";
