@@ -1,8 +1,7 @@
 import { Layout } from "../layouts/layout";
 
 const Home = () => {
-  const token = localStorage.getItem("token");
-  console.log(token);
+  console.log(process.env.API_URL);
 
   return (
     <Layout>
