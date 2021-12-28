@@ -34,7 +34,9 @@ const AddBooks = () => {
       });
   };
 
-  const submit = () => {
+  const submit = (e: Event) => {
+    e.preventDefault();
+
     alert("Your book was added!");
 
     // const userId = localStorage.getItem("userId");

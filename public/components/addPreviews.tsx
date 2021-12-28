@@ -31,10 +31,10 @@ const AddPreviews = () => {
       });
   };
 
-  const submit = () => {
-    alert("Your project preview was added!");
+  const submit = (e: Event) => {
+    e.preventDefault();
 
-    // const userId = localStorage.getItem("userId");
+    alert("Your project preview was added!");
 
     const previewData = {
       title,
