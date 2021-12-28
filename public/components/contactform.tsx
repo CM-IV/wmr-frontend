@@ -15,11 +15,11 @@ const ContactForm = () => {
 
             <section class="section">
                 <div class="box">
-                    <form name="fullstack-contact-form" data-netlify-recaptcha="true" method="POST" data-netlify="true">
+                    <form name="contact" method="POST" data-netlify-recaptcha="true"  data-netlify="true">
                         <div class="field">
                             <div class="control">
                                 <label class="label">
-                                    Signup Email
+                                    Email
                                     <input required class="input" type="email" name="email" placeholder="email here" />
                                 </label>
                             </div>
@@ -28,8 +28,8 @@ const ContactForm = () => {
                         <div class="field">
                             <div class="control">
                                 <label class="label">
-                                    message
-                                    <textarea class="textarea" name="message" placeholder="message here"></textarea>
+                                    Message
+                                    <textarea class="textarea" type="text" name="message" placeholder="message here"></textarea>
                                 </label>
                             </div>
                         </div>
