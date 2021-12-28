@@ -13,7 +13,7 @@ const AddBooks = () => {
   const token = localStorage.getItem("token");
 
   const getUser = () => {
-    fetch(`${process.env.API_URL}/user`, {
+    fetch(`${process.env.WMR_API_URL}/user`, {
       method: "GET",
       credentials: "include",
       headers: {
@@ -51,7 +51,7 @@ const AddBooks = () => {
       publish_year,
     };
 
-    const addBook = fetch(`${process.env.API_URL}/books`, {
+    const addBook = fetch(`${process.env.WMR_API_URL}/books`, {
       method: "POST",
       credentials: "same-origin",
       headers: {

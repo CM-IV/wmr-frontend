@@ -5,7 +5,7 @@ const Logout = () => {
   const token = localStorage.getItem("token");
 
   const submit = () => {
-    const logoutPost = fetch(`${process.env.API_URL}/logout`, {
+    const logoutPost = fetch(`${process.env.WMR_API_URL}/logout`, {
       method: "POST",
       credentials: "include",
       headers: {

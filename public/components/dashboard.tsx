@@ -7,7 +7,7 @@ const Dashboard = () => {
   const [projectNum, setProjectNum] = useState(0);
 
   const books = () => {
-    const fetchData = fetch(`${process.env.API_URL}/books`, {
+    const fetchData = fetch(`${process.env.WMR_API_URL}/books`, {
       method: "GET",
       mode: "cors",
       credentials: "same-origin",
@@ -27,7 +27,7 @@ const Dashboard = () => {
   };
 
   const previews = () => {
-    const fetchData = fetch(`${process.env.API_URL}/previews`, {
+    const fetchData = fetch(`${process.env.WMR_API_URL}/previews`, {
       method: "GET",
       mode: "cors",
       credentials: "same-origin",

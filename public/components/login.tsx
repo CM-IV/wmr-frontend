@@ -15,7 +15,7 @@ const Login = () => {
       password,
     };
 
-    const loginPost = fetch(`${process.env.API_URL}/login`, {
+    const loginPost = fetch(`${process.env.WMR_API_URL}/login`, {
       method: "POST",
       credentials: "same-origin",
       headers: {

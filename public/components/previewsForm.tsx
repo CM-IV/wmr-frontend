@@ -12,7 +12,7 @@ const PreviewsForm = () => {
   const token = localStorage.getItem("token");
 
   const fetchPreviews = () => {
-    const fetchData = fetch(`${process.env.API_URL}/previews/?page=${page}`, {
+    const fetchData = fetch(`${process.env.WMR_API_URL}/previews/?page=${page}`, {
       method: "GET",
       mode: "cors",
       credentials: "same-origin",
@@ -39,7 +39,7 @@ const PreviewsForm = () => {
 
   const deleteRow = async (id: number) => {
     if (window.confirm("Are you sure?")) {
-      await fetch(`${process.env.API_URL}/previews/${id}`, {
+      await fetch(`${process.env.WMR_API_URL}/previews/${id}`, {
         method: "DELETE",
         mode: "cors",
         credentials: "same-origin",

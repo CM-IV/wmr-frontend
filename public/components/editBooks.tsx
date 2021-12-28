@@ -20,7 +20,7 @@ const EditBooks = () => {
   id = url.split("/")[2].substring(0, 36);
 
   const getBook = () => {
-    const fetchData = fetch(`${process.env.API_URL}/books/${id}`, {
+    const fetchData = fetch(`${process.env.WMR_API_URL}/books/${id}`, {
       method: "GET",
       mode: "cors",
       credentials: "same-origin",
@@ -58,7 +58,7 @@ const EditBooks = () => {
       description,
     };
 
-    const updateBook = fetch(`${process.env.API_URL}/books/${id}`, {
+    const updateBook = fetch(`${process.env.WMR_API_URL}/books/${id}`, {
       method: "PUT",
       credentials: "same-origin",
       headers: {

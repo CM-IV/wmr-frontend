@@ -11,7 +11,7 @@ const BooksForm = () => {
   const token = localStorage.getItem("token");
 
   const fetchBooks = () => {
-    const fetchData = fetch(`${process.env.API_URL}/books/?page=${page}`, {
+    const fetchData = fetch(`${process.env.WMR_API_URL}/books/?page=${page}`, {
       method: "GET",
       mode: "cors",
       credentials: "same-origin",
@@ -38,7 +38,7 @@ const BooksForm = () => {
 
   const deleteRow = async (id: number) => {
     if (window.confirm("Are you sure?")) {
-      await fetch(`${process.env.API_URL}/books/${id}`, {
+      await fetch(`${process.env.WMR_API_URL}/books/${id}`, {
         method: "DELETE",
         mode: "cors",
         credentials: "same-origin",

@@ -18,7 +18,7 @@ const EditPreviews = () => {
   id = currentUrl.split("/")[2].substring(0, 36);
 
   const getPreview = () => {
-    const fetchData = fetch(`${process.env.API_URL}/previews/${id}`, {
+    const fetchData = fetch(`${process.env.WMR_API_URL}/previews/${id}`, {
       method: "GET",
       mode: "cors",
       credentials: "same-origin",
@@ -54,7 +54,7 @@ const EditPreviews = () => {
       url,
     };
 
-    const updatePreview = fetch(`${process.env.API_URL}/previews/${id}`, {
+    const updatePreview = fetch(`${process.env.WMR_API_URL}/previews/${id}`, {
       method: "PUT",
       credentials: "same-origin",
       headers: {

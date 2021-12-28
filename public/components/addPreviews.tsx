@@ -10,7 +10,7 @@ const AddPreviews = () => {
   const token = localStorage.getItem("token");
 
   const getUser = () => {
-    fetch(`${process.env.API_URL}/user`, {
+    fetch(`${process.env.WMR_API_URL}/user`, {
       method: "GET",
       credentials: "include",
       headers: {
@@ -43,7 +43,7 @@ const AddPreviews = () => {
       assigned_to: user,
     };
 
-    const addPreview = fetch(`${process.env.API_URL}/previews`, {
+    const addPreview = fetch(`${process.env.WMR_API_URL}/previews`, {
       method: "POST",
       credentials: "same-origin",
       headers: {

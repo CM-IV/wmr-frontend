@@ -9,7 +9,7 @@ const Previews = () => {
   const [isPaginated, setIsPaginated] = useState(0);
 
   const previews = () => {
-    const fetchData = fetch(`${process.env.API_URL}/previews/?page=${page}`, {
+    const fetchData = fetch(`${process.env.WMR_API_URL}/previews/?page=${page}`, {
       method: "GET",
       mode: "cors",
       credentials: "same-origin",

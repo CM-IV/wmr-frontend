@@ -9,7 +9,7 @@ const Books = () => {
   const [isPaginated, setIsPaginated] = useState(0);
 
   const books = () => {
-    const fetchData = fetch(`${process.env.API_URL}/books/?page=${page}`, {
+    const fetchData = fetch(`${process.env.WMR_API_URL}/books/?page=${page}`, {
       method: "GET",
       mode: "cors",
       credentials: "same-origin",
