@@ -37,9 +37,6 @@ const Nav = () => {
             <Link to={"/about"} class="navbar-item">
               About
             </Link>
-            <Link to={"/contact"} class="navbar-item">
-              Contact
-            </Link>
             <Link to={"/products"} class="navbar-item">
               Products
             </Link>
