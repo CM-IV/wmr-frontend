@@ -1,7 +1,6 @@
 import { Layout } from "../layouts/layout";
 
 const Home = () => {
-  console.log(process.env.WMR_API_URL);
 
   return (
     <Layout>
