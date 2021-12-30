@@ -29,7 +29,18 @@ const Nav = () => {
           </a>
         </div>
 
-        <div id="navMenu" class="navbar-menu is-active">
+        <input
+          type="checkbox"
+          id="navbar-burger-toggle"
+          class="navbar-burger-toggle is-hidden"
+        />
+        <label for="navbar-burger-toggle" class="navbar-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <div id="navMenu" class="navbar-menu">
           <div class="navbar-start">
             <Link to={"/"} class="navbar-item">
               Home
